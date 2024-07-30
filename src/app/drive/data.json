@@ -1,0 +1,14 @@
+[
+  { "type": "checkbox", "name": "check", "content": "Verificado" },
+  { "type": "date", "name": "date", "content": "Fecha" },
+  { "type": "text", "name": "name", "content": "Nombre" },
+  { "type": "text", "name": "product", "content": "Producto" },
+  { "type": "text", "name": "features", "content": "Caracteristicas" },
+  { "type": "text", "name": "data", "content": "Datos" },
+  { "type": "text", "name": "specs", "content": "Especificaciones" },
+  { "type": "number", "name": "price", "content": "Precio" },
+  { "type": "checkbox", "name": "paid", "content": "Pago" },
+  { "type": "text", "name": "contact", "content": "Contacto" },
+  { "type": "text", "name": "delivery", "content": "Entrega" },
+  { "type": "text", "name": "direction", "content": "Direccion" }
+]
