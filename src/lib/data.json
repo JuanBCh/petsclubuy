@@ -1,0 +1,32 @@
+{
+  "drive": {
+    "raze": ["dog", "cat"],
+    "size": ["XS", "S", "M", "L", "XL", "..."],
+    "colors": [
+      "Beige",
+      "Amarillo",
+      "Azul Francia",
+      "Verde Fantasia",
+      "Verde Militar",
+      "Negro",
+      "Azul Navy",
+      "Violeta",
+      "Fucsia",
+      "Rosa",
+      "Rojo"
+    ],
+    "colorsHEX": [
+      "#E1C699",
+      "#FFD300",
+      "#318CE7",
+      "#008F39 ",
+      "#1C422D",
+      "#000000",
+      "#00304E",
+      "#4C2882",
+      "#FF00FF",
+      "#FF007F",
+      "#FF0000"
+    ]
+  }
+}
