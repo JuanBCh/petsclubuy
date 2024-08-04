@@ -3,19 +3,19 @@ import MainCards from "@/ui/mainCards";
 export default function Home() {
   const cards = [
     {
-      imgSrc: "/mainPedidos.jpeg",
+      imgSrc: "/main/pedidos.jpeg",
       imgAlt: "Agregar pedidos",
       title: "Agregar Pedidos",
       link: "/drive",
     },
     {
-      imgSrc: "/mainCrear.jpeg",
+      imgSrc: "/main/crear.jpeg",
       imgAlt: "Ver pedidos",
       title: "Ver Pedidos",
       link: "/pedidos",
     },
     {
-      imgSrc: "/mainStock.jpeg",
+      imgSrc: "/main/stock.jpeg",
       imgAlt: "Stock",
       title: "Stock",
       link: "/stock",

@@ -1,32 +1,67 @@
 {
   "drive": {
-    "raze": ["dog", "cat"],
-    "size": ["XS", "S", "M", "L", "XL", "..."],
-    "colors": [
-      "Beige",
-      "Amarillo",
-      "Azul Francia",
-      "Verde Fantasia",
-      "Verde Militar",
-      "Negro",
-      "Azul Navy",
-      "Violeta",
-      "Fucsia",
-      "Rosa",
-      "Rojo"
-    ],
-    "colorsHEX": [
-      "#E1C699",
-      "#FFD300",
-      "#318CE7",
-      "#008F39 ",
-      "#1C422D",
-      "#000000",
-      "#00304E",
-      "#4C2882",
-      "#FF00FF",
-      "#FF007F",
-      "#FF0000"
-    ]
+    "products": ["Chapita remachada"],
+    "dog": {
+      "sizes": ["XS", "S", "M", "L", "XL", "..."],
+      "colors": [
+        "Beige",
+        "Amarillo",
+        "Azul Francia",
+        "Verde Fantasia",
+        "Verde Militar",
+        "Negro",
+        "Azul Navy",
+        "Violeta",
+        "Fucsia",
+        "Rosa",
+        "Rojo"
+      ],
+      "colorsHEX": [
+        "#E1C699",
+        "#FFD300",
+        "#318CE7",
+        "#008F39 ",
+        "#1C422D",
+        "#000000",
+        "#00304E",
+        "#4C2882",
+        "#FF00FF",
+        "#FF007F",
+        "#FF0000"
+      ]
+    },
+    "cat": {
+      "models": ["LISO", "HUE", "REF"],
+      "buckles": ["TRA", "AF"],
+      "colors": [
+        "Celeste",
+        "Azul",
+        "Verde",
+        "Amarillo",
+        "Naranja",
+        "Rojo",
+        "Rosado",
+        "Fucsia",
+        "Lila",
+        "Violeta",
+        "Marron"
+      ],
+      "colorsHEX": [
+        "#27A1E8",
+        "#318CE7",
+        "#008F39",
+        "#FFD300",
+        "#FF9000",
+        "#FF0000",
+        "#FF007F",
+        "#FF00FF",
+        "#C656FF",
+        "#4C2882",
+        "#874300"
+      ],
+      "ages": ["Mayor", "Menor"],
+      "plateColors": ["Negra", "Verde", "Naranja", "Rojo", "Rosa claro"],
+      "plateColorsHEX": ["#000000", "#008F39", "#FF9000", "#FF0000", "#FF007F"]
+    }
   }
 }

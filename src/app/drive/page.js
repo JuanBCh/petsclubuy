@@ -1,7 +1,12 @@
+"use client";
+
 import { createDelivery } from "@/lib/actions";
 import Product from "@/ui/drive/product/product";
+import { useState } from "react";
+import data from "@/lib/data.json";
 
 export default function DrivePage() {
+  const [input, setInput] = useState({});
   return (
     <main className="flex flex-col px-4">
       <h2></h2>
@@ -18,7 +23,7 @@ export default function DrivePage() {
           Nombre
           <input type="text" name="name" className="w-screen border" />
         </label>
-        <Product />
+        <Product input={input} setInput={setInput} drive={data.drive} />
         <label name="features">
           Caracteristicas
           <input type="text" name="features" className="w-screen border" />

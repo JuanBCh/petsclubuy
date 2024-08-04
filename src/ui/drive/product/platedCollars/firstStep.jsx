@@ -10,12 +10,19 @@ export default function FirstStep({ input, setInput }) {
   });
 
   const handleClick = (e) => {
+    e.preventDefault();
     const { name } = e.target;
-    setInput({ ...input, firstStep: name });
+
+    input.product.product.firstStep !== name &&
+      setInput((prevState) => ({
+        ...prevState,
+        product: { product: "Chapita remachada", firstStep: name },
+      }));
     setImgs({
       dog: name === "dog" ? "/buttons/dog.jpeg" : "/buttons/dog_bw.jpeg",
       cat: name === "cat" ? "/buttons/cat.jpeg" : "/buttons/cat_bw.jpeg",
     });
+    console.log(input);
   };
 
   return (

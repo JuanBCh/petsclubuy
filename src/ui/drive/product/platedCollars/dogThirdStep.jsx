@@ -1,13 +1,13 @@
-"use client";
-
-import { drive } from "@/lib/data.json";
-
-export default function ThirdStep({ input, setInput }) {
-  const { colors, colorsHEX } = drive;
+export default function DogThirdStep({ input, setInput, data }) {
+  const { colors, colorsHEX } = data;
 
   const handleClick = (e) => {
+    e.preventDefault();
     const { innerText } = e.target;
-    setInput({ ...input, thirdStep: innerText });
+    setInput((prevState) => ({
+      ...prevState,
+      product: { ...prevState.product, thirdStep: innerText },
+    }));
   };
 
   return (
@@ -19,9 +19,9 @@ export default function ThirdStep({ input, setInput }) {
             onClick={(e) => handleClick(e)}
             className="text-white text-2xl my-1 py-3 flex justify-center rounded-lg"
             style={{
-              backgroundColor: !input.thirdStep
+              backgroundColor: !input.product.thirdStep
                 ? colorsHEX[k]
-                : input.thirdStep == color
+                : input.product.thirdStep == color
                 ? colorsHEX[k]
                 : "gray",
             }}
