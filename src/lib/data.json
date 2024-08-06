@@ -1,8 +1,81 @@
 {
   "drive": {
-    "products": ["Chapita identificadora"],
+    "products": ["Collar con Chapita", "Chapita identificadora"],
     "options": {
       "Chapita identificadora": {
+        "cat": {
+          "colors": [
+            "Negro",
+            "Naranja",
+            "Rojo",
+            "Violeta",
+            "Fucsia",
+            "Azul",
+            "Verde",
+            "Celeste"
+          ],
+          "colorsHEX": [
+            "#000000",
+            "#FF9000",
+            "#FF0000",
+            "#4C2882",
+            "#FF00FF",
+            "#318CE7",
+            "#008F39",
+            "#27A1E8"
+          ]
+        },
+        "bone": {
+          "colors": [
+            "Negro",
+            "Dorado",
+            "Rojo",
+            "Violeta",
+            "Fucsia",
+            "Azul",
+            "Celeste",
+            "Verde"
+          ],
+          "colorsHEX": [
+            "#000000",
+            "#FF9000",
+            "#FF0000",
+            "#4C2882",
+            "#FF00FF",
+            "#318CE7",
+            "#27A1E8",
+            "#008F39"
+          ]
+        },
+        "circles": {
+          "sizes": ["Pequeña", "Grande"],
+          "faces": [1, 2],
+          "colors": [
+            "Negro",
+            "Rojo",
+            "Azul",
+            "Celeste",
+            "Violeta",
+            "Fucsia",
+            "Verde"
+          ],
+          "colorsHEX": [
+            "#000000",
+            "#FF0000",
+            "#318CE7",
+            "#27A1E8",
+            "#4C2882",
+            "#FF00FF",
+            "#008F39"
+          ]
+        },
+        "tag": {
+          "sizes": ["S", "M", "L"],
+          "colors": ["Plateado", "Dorado"],
+          "colorsHEX": ["#B8C0CF", "#FFEA80"]
+        }
+      },
+      "Collar con Chapita": {
         "dog": {
           "sizes": ["XS", "S", "M", "L", "XL", "..."],
           "colors": [

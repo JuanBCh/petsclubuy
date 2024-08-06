@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import RivetedPlates from "./platedCollars/form";
+import RivetedPlates from "./rivetedPlates/form";
+import IdPlates from "./idPlate/form";
 
 export default function Product({ input, setInput, drive }) {
   const [productsInput, setProductsInput] = useState({
@@ -10,12 +11,18 @@ export default function Product({ input, setInput, drive }) {
     },
   });
   const productsComponents = {
-    "Chapita identificadora": (
+    "Collar con Chapita": (
       <RivetedPlates
-        product="Chapita identificadora"
         input={productsInput}
         setInput={setProductsInput}
-        data={drive.options}
+        data={drive.options["Collar con Chapita"]}
+      />
+    ),
+    "Chapita identificadora": (
+      <IdPlates
+        input={productsInput}
+        setInput={setProductsInput}
+        data={drive.options["Chapita identificadora"]}
       />
     ),
   };
@@ -23,7 +30,7 @@ export default function Product({ input, setInput, drive }) {
   const handleClick = (e) => {
     const { value } = e.target;
     productsInput.product.product !== value &&
-      setProductsInput({ ...productsInput, product: { product: value } });
+      setProductsInput({ product: { product: value } });
   };
 
   return (
