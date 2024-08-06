@@ -1,8 +1,8 @@
 {
   "drive": {
-    "products": ["Chapita remachada"],
+    "products": ["Chapita identificadora"],
     "options": {
-      "Chapita remachada": {
+      "Chapita identificadora": {
         "dog": {
           "sizes": ["XS", "S", "M", "L", "XL", "..."],
           "colors": [

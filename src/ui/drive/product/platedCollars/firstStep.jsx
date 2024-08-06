@@ -16,13 +16,12 @@ export default function FirstStep({ input, setInput }) {
     input.product.product.firstStep !== name &&
       setInput((prevState) => ({
         ...prevState,
-        product: { product: "Chapita remachada", firstStep: name },
+        product: { product: "Chapita identificadora", firstStep: name },
       }));
     setImgs({
       dog: name === "dog" ? "/buttons/dog.jpeg" : "/buttons/dog_bw.jpeg",
       cat: name === "cat" ? "/buttons/cat.jpeg" : "/buttons/cat_bw.jpeg",
     });
-    console.log(input);
   };
 
   return (

@@ -10,9 +10,9 @@ export default function Product({ input, setInput, drive }) {
     },
   });
   const productsComponents = {
-    "Chapita remachada": (
+    "Chapita identificadora": (
       <RivetedPlates
-        product="Chapita remachada"
+        product="Chapita identificadora"
         input={productsInput}
         setInput={setProductsInput}
         data={drive.options}
