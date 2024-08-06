@@ -12,9 +12,10 @@ export default function Product({ input, setInput, drive }) {
   const productsComponents = {
     "Chapita remachada": (
       <RivetedPlates
+        product="Chapita remachada"
         input={productsInput}
         setInput={setProductsInput}
-        data={drive}
+        data={drive.options}
       />
     ),
   };
@@ -26,10 +27,14 @@ export default function Product({ input, setInput, drive }) {
   };
 
   return (
-    <label name="product">
-      Producto
+    <label name="product" className="text-xl">
+      <p className="font-semibold mb-2">Producto</p>
       <input type="hidden" name="product" />
-      <select defaultValue="" onClick={(e) => handleClick(e)}>
+      <select
+        defaultValue=""
+        onClick={(e) => handleClick(e)}
+        className="w-full h-12 border rounded-lg px-1 shadow"
+      >
         <option value="" disabled>
           Producto
         </option>
