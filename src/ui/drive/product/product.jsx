@@ -11,6 +11,13 @@ export default function Product({ input, setInput, drive }) {
     },
   });
   const productsComponents = {
+    "Chapita identificadora": (
+      <IdPlates
+        input={productsInput}
+        setInput={setProductsInput}
+        data={drive.options["Chapita identificadora"]}
+      />
+    ),
     "Collar con Chapita": (
       <RivetedPlates
         input={productsInput}
@@ -18,11 +25,11 @@ export default function Product({ input, setInput, drive }) {
         data={drive.options["Collar con Chapita"]}
       />
     ),
-    "Chapita identificadora": (
-      <IdPlates
+    "Collares Básicos": (
+      <RivetedPlates
         input={productsInput}
         setInput={setProductsInput}
-        data={drive.options["Chapita identificadora"]}
+        data={drive.options["Collares Básicos"]}
       />
     ),
   };
