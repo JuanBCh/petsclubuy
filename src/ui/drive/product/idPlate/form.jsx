@@ -4,6 +4,8 @@ import FirstStep from "./firstStep";
 import RoundedSecondStep from "./rounded/roundedSecondStep";
 import RoundedThirdStep from "./rounded/roundedThirdStep";
 import RoundedFourthStep from "./rounded/roundedFourthStep";
+import TagSecondStep from "./tag/tagSecondStep";
+import TagThirdStep from "./tag/tagThirdStep";
 
 export default function IdPlates({ input, setInput, data }) {
   return (
@@ -38,24 +40,14 @@ export default function IdPlates({ input, setInput, data }) {
           )}
         </>
       )}
-      {/* <FirstStep input={input} setInput={setInput} />
-        {input.product.firstStep == "cat" && (
-          <>
-            <CatSecondStep input={input} setInput={setInput} data={data.cat} />
-            {input.product.secondStep && (
-              <CatThirdStep input={input} setInput={setInput} data={data.cat} />
-            )}
-            {input.product.thirdStep && (
-              <CatFourthStep input={input} setInput={setInput} data={data.cat} />
-            )}
-            {input.product.fourthStep && (
-              <CatFifthStep input={input} setInput={setInput} data={data.cat} />
-            )}
-            {input.product.fifthStep && (
-              <CatSixthStep input={input} setInput={setInput} data={data.cat} />
-            )}
-          </>
-        )} */}
+      {input.product.firstStep == "tag" && (
+        <>
+          <TagSecondStep input={input} setInput={setInput} data={data.tag} />
+          {input.product.secondStep && (
+            <TagThirdStep input={input} setInput={setInput} data={data.tag} />
+          )}
+        </>
+      )}
     </>
   );
 }
