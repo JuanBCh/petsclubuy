@@ -19,7 +19,7 @@ export default function MainCards({ imgSrc, imgAlt, title, link }) {
       />
       <p
         className="mx-4 my-2 text-white text-2xl font-semibold"
-        style={{ "text-shadow": "0 0 10px black" }}
+        style={{ textShadow: "0 0 10px black" }}
       >
         {title}
       </p>

@@ -1,18 +1,18 @@
+import BoneSecondStep from "./bone/boneSecondStep";
+import CatSecondStep from "./cat/catSecondStep";
 import FirstStep from "./firstStep";
 
 export default function IdPlates({ input, setInput, data }) {
   return (
     <>
       <FirstStep input={input} setInput={setInput} data={data} />
+      {input.product.firstStep == "cat" && (
+        <CatSecondStep input={input} setInput={setInput} data={data.cat} />
+      )}
+      {input.product.firstStep == "bone" && (
+        <BoneSecondStep input={input} setInput={setInput} data={data.cat} />
+      )}
       {/* <FirstStep input={input} setInput={setInput} />
-        {input.product.firstStep == "dog" && (
-          <>
-            <DogSecondStep input={input} setInput={setInput} data={data.dog} />
-            {input.product.secondStep && (
-              <DogThirdStep input={input} setInput={setInput} data={data.dog} />
-            )}
-          </>
-        )}
         {input.product.firstStep == "cat" && (
           <>
             <CatSecondStep input={input} setInput={setInput} data={data.cat} />

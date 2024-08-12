@@ -3,6 +3,7 @@
     "products": ["Collar con Chapita", "Chapita identificadora"],
     "options": {
       "Chapita identificadora": {
+        "products": ["cat", "bone", "rounded", "tag"],
         "cat": {
           "colors": [
             "Negro",
@@ -10,9 +11,9 @@
             "Rojo",
             "Violeta",
             "Fucsia",
+            "Celeste",
             "Azul",
-            "Verde",
-            "Celeste"
+            "Verde"
           ],
           "colorsHEX": [
             "#000000",
@@ -20,9 +21,9 @@
             "#FF0000",
             "#4C2882",
             "#FF00FF",
+            "#27A1E8",
             "#318CE7",
-            "#008F39",
-            "#27A1E8"
+            "#008F39"
           ]
         },
         "bone": {
@@ -47,7 +48,7 @@
             "#008F39"
           ]
         },
-        "circles": {
+        "rounded": {
           "sizes": ["Pequeña", "Grande"],
           "faces": [1, 2],
           "colors": [
