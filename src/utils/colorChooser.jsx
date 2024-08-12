@@ -1,10 +1,6 @@
-export default function ColorChooser({
-  input,
-  setInput,
-  colors,
-  colorsHEX,
-  step,
-}) {
+export default function ColorChooser({ input, setInput, data, step }) {
+  const { colors, colorsHEX } = data;
+
   const handleClick = (e) => {
     e.preventDefault();
     const { innerText } = e.target;

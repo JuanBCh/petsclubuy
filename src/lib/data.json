@@ -39,7 +39,7 @@
           ],
           "colorsHEX": [
             "#000000",
-            "#FF9000",
+            "#FFEA50",
             "#FF0000",
             "#4C2882",
             "#FF00FF",
@@ -53,27 +53,27 @@
           "faces": [1, 2],
           "colors": [
             "Negro",
-            "Rojo",
+            "Violeta",
             "Azul",
             "Celeste",
-            "Violeta",
             "Fucsia",
+            "Rojo",
             "Verde"
           ],
           "colorsHEX": [
             "#000000",
-            "#FF0000",
+            "#4C2882",
             "#318CE7",
             "#27A1E8",
-            "#4C2882",
             "#FF00FF",
+            "#FF0000",
             "#008F39"
           ]
         },
         "tag": {
           "sizes": ["S", "M", "L"],
           "colors": ["Plateado", "Dorado"],
-          "colorsHEX": ["#B8C0CF", "#FFEA80"]
+          "colorsHEX": ["#B8C0CF", "#FFEA50"]
         }
       },
       "Collar con Chapita": {
