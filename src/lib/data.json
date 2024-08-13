@@ -3,7 +3,8 @@
     "products": [
       "Collar con Chapita",
       "Chapita identificadora",
-      "Collares Básicos"
+      "Collares Básicos",
+      "Collares con Diseño"
     ],
     "options": {
       "Chapita identificadora": {
@@ -217,6 +218,23 @@
             "#FF9000",
             "#FF0000",
             "#FF007F"
+          ]
+        }
+      },
+      "Collares con Diseño": {
+        "dog": {
+          "sizes": ["XS", "S", "M", "L"],
+          "designs": ["CAMO", "COLORS", "HOLSTEIN", "LEOPARD", "PIZZA"]
+        },
+        "cat": {
+          "designs": [
+            "Barbie",
+            "Batman",
+            "Mujer Maravilla",
+            "Nacional",
+            "Peñarol",
+            "Spider-Man",
+            "Superman"
           ]
         }
       }

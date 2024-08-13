@@ -3,6 +3,7 @@
 import { useState } from "react";
 import RivetedPlates from "./rivetedPlates/form";
 import IdPlates from "./idPlate/form";
+import DesignCollars from "./designCollars/form";
 
 export default function Product({ input, setInput, drive }) {
   const [productsInput, setProductsInput] = useState({
@@ -30,6 +31,13 @@ export default function Product({ input, setInput, drive }) {
         input={productsInput}
         setInput={setProductsInput}
         data={drive.options["Collares Básicos"]}
+      />
+    ),
+    "Collares con Diseño": (
+      <DesignCollars
+        input={productsInput}
+        setInput={setProductsInput}
+        data={drive.options["Collares con Diseño"]}
       />
     ),
   };
