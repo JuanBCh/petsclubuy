@@ -1,4 +1,4 @@
-import ColorChooser from "@/utils/colorChooser";
+import ColorChooser from "@/utils/products/colorChooser";
 
 export default function CatSecondStep({ input, setInput, data }) {
   return (

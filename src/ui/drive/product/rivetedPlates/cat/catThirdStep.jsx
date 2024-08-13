@@ -16,6 +16,7 @@ export default function CatThirdStep({ input, setInput, data }) {
       {buckles.map((buc, k) => {
         return (
           <Image
+            key={k}
             src={`/buckles/${
               !input.product.thirdStep
                 ? buc

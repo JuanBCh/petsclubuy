@@ -44,3 +44,10 @@ export const createDelivery = async (formData) => {
     console.error(e);
   }
 };
+
+export const handleProductInput = (setInput, step, value) => {
+  setInput((prevState) => ({
+    ...prevState,
+    product: { product: prevState.product.product, [step]: value },
+  }));
+};
