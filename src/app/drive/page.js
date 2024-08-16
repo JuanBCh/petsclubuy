@@ -4,6 +4,7 @@ import { createDelivery } from "@/lib/actions";
 import Product from "@/ui/drive/product/product";
 import { useState } from "react";
 import data from "@/lib/data.json";
+import ItemCounter from "@/utils/products/itemCounter";
 
 export default function DrivePage() {
   const [input, setInput] = useState({});
@@ -11,6 +12,12 @@ export default function DrivePage() {
     <main className="flex flex-col px-4">
       <h2 className="text-3xl text-center my-9">Registro de pedidos</h2>
       <form action={createDelivery} className="flex flex-col space-y-5">
+        {input.products && (
+          <>
+            <p className="font-semibold mb-2 text-xl">Productos agregados</p>
+            <ItemCounter input={input} />
+          </>
+        )}
         <label
           name="check"
           className="w-full flex items-center justify-between text-xl px-9"
