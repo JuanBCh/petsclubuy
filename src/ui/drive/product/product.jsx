@@ -4,6 +4,7 @@ import { useState } from "react";
 import RivetedPlates from "./rivetedPlates/form";
 import IdPlates from "./idPlate/form";
 import DesignCollars from "./designCollars/form";
+import Plates from "./plate/form";
 
 export default function Product({ input, setInput, drive }) {
   const [productsInput, setProductsInput] = useState({
@@ -62,39 +63,17 @@ export default function Product({ input, setInput, drive }) {
   };
 
   const handleClick = (e) => {
-    const { value, checked } = e.target;
-    if (checked !== undefined) {
-      console.log(checked);
-      setInput((prevState) => ({
-        ...prevState,
-        product: {
-          ...prevState.product,
-          riveted: checked,
-        },
-      }));
-    } else {
-      productsInput.product.product !== value &&
-        setProductsInput({ product: { product: value } });
-    }
-    console.log(productsInput);
+    const { value } = e.target;
+
+    productsInput.product.product !== value &&
+      setProductsInput({ product: { product: value } });
   };
 
   return (
     <label name="product" className="text-xl">
       <p className="font-semibold mb-2">Producto</p>
       <input type="hidden" name="product" />
-      <label
-        name="check"
-        className="w-full p-2 my-4 border rounded-lg shadow flex items-center justify-between text-xl"
-      >
-        <p className="font-semibold">Chapita remachada</p>
-        <input
-          onClick={(e) => handleClick(e)}
-          type="checkbox"
-          name="check"
-          className="h-9 w-9 shadow"
-        />
-      </label>
+      <Plates input={productsInput} setInput={setProductsInput} />
       <select
         defaultValue=""
         onClick={(e) => handleClick(e)}
