@@ -6,7 +6,9 @@ export default function FirstStep({ setInput }) {
         ...prevState,
         product: {
           ...prevState.product,
-          riveted: checked,
+          riveted: {
+            checked: checked,
+          },
         },
       }));
     }
@@ -14,7 +16,7 @@ export default function FirstStep({ setInput }) {
   return (
     <label
       name="check"
-      className="w-full p-2 my-4 border rounded-lg shadow flex items-center justify-between text-xl"
+      className="w-full p-2 mt-4 border rounded-lg shadow flex items-center justify-between text-xl"
     >
       <p className="font-semibold">Chapita remachada</p>
       <input

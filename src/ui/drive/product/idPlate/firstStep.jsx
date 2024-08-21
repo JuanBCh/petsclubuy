@@ -23,7 +23,11 @@ export default function FirstStep({ input, setInput, data }) {
     const { title } = e.target;
     setInput((prevState) => ({
       ...prevState,
-      product: { product: prevState.product.product, firstStep: title },
+      product: {
+        product: prevState.product.product,
+        riveted: prevState.product.riveted,
+        firstStep: title,
+      },
     }));
   };
   return (

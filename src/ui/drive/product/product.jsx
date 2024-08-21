@@ -4,31 +4,33 @@ import { useState } from "react";
 import RivetedPlates from "./rivetedPlates/form";
 import IdPlates from "./idPlate/form";
 import DesignCollars from "./designCollars/form";
-import Plates from "./plate/form";
+import DataPlate from "./dataPlate/form";
 
 export default function Product({ input, setInput, drive }) {
   const [productsInput, setProductsInput] = useState({
     product: {
       product: "",
-      riveted: false,
+      riveted: {
+        checked: false,
+      },
     },
   });
 
   const createOrder = (e) => {
     e.preventDefault();
     const finalInput = productsInput.product;
+    console.log(finalInput);
     setInput((prevState) => ({
       ...prevState,
       products: Array.isArray(prevState.products)
         ? [...prevState.products, finalInput]
         : [finalInput],
     }));
-    setProductsInput({ product: { product: "" } });
+    setProductsInput({ product: { product: "", riveted: false } });
     window.scrollTo({
       top: 0,
       behavior: "smooth",
     });
-    console.log(input);
   };
 
   const productsComponents = {
@@ -66,14 +68,16 @@ export default function Product({ input, setInput, drive }) {
     const { value } = e.target;
 
     productsInput.product.product !== value &&
-      setProductsInput({ product: { product: value } });
+      setProductsInput({
+        product: { product: value, riveted: productsInput.product.riveted },
+      });
   };
 
   return (
     <label name="product" className="text-xl">
       <p className="font-semibold mb-2">Producto</p>
       <input type="hidden" name="product" />
-      <Plates input={productsInput} setInput={setProductsInput} />
+      <DataPlate input={productsInput} setInput={setProductsInput} />
       <select
         defaultValue=""
         onClick={(e) => handleClick(e)}

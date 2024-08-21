@@ -16,7 +16,11 @@ export default function FirstStep({ input, setInput }) {
     input.product.product.firstStep !== name &&
       setInput((prevState) => ({
         ...prevState,
-        product: { product: prevState.product.product, firstStep: name },
+        product: {
+          product: prevState.product.product,
+          riveted: prevState.product.riveted,
+          firstStep: name,
+        },
       }));
     setImgs({
       dog: name === "dog" ? "/buttons/dog.jpeg" : "/buttons/dog_bw.jpeg",
