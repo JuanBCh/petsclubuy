@@ -1,11 +1,11 @@
 {
   "drive": {
-    "products": [
-      "Collar con Chapita",
+    "collars": [
       "Chapita identificadora",
       "Collares Básicos",
       "Collares con Diseño"
     ],
+    "chests": ["Capita Hoodie Adidog", "Pechera"],
     "options": {
       "Chapita identificadora": {
         "products": ["cat", "bone", "rounded", "tag"],
@@ -237,6 +237,31 @@
             "Superman"
           ]
         }
+      },
+      "Capita Hoodie Adidog": {
+        "sizes": ["2XL", "3XL", "4XL", "7XL", "9XL"],
+        "colors": ["Negro", "Gris", "Azul", "Celeste", "Rojo", "Rosa"],
+        "colorsHEX": [
+          "#000000",
+          "#8E9AB1",
+          "#318CE7",
+          "#27A1E8",
+          "#FF0000",
+          "#FF007F"
+        ]
+      },
+      "Pechera": {
+        "sizes": ["XXS", "XS", "S", "M", "L", "XL"],
+        "designs": [
+          "Animal Print",
+          "Batman",
+          "Cápitan America",
+          "Militar",
+          "Mujer Maravilla",
+          "Rosas",
+          "Spiderman",
+          "Superman"
+        ]
       }
     }
   }

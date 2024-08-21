@@ -1,4 +1,4 @@
-export default function CatSecondStep({ input, setInput, data }) {
+export default function FullChestSecondStep({ input, setInput, data }) {
   const { designs } = data;
 
   const handleClick = (e) => {
@@ -22,7 +22,7 @@ export default function CatSecondStep({ input, setInput, data }) {
                 ? "bg-petsBlue"
                 : "bg-gray-100"
             } ${
-              !input.product.firstStep
+              !input.product.secondStep
                 ? "shadow-lg"
                 : design === input.product.secondStep
                 ? "shadow-lg"

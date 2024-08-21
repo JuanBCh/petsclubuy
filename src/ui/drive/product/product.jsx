@@ -1,10 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import RivetedPlates from "./rivetedPlates/form";
-import IdPlates from "./idPlate/form";
-import DesignCollars from "./designCollars/form";
+import RivetedPlates from "./collars/rivetedPlates/form";
+import IdPlates from "./collars/idPlate/form";
+import DesignCollars from "./collars/designCollars/form";
 import DataPlate from "./dataPlate/form";
+import ProductSelects from "./productSelects";
+import AdidogHoodies from "./chests/adidogHoodies/form";
+import FullChest from "./chests/fullChest/form";
 
 export default function Product({ input, setInput, drive }) {
   const [productsInput, setProductsInput] = useState({
@@ -33,7 +36,7 @@ export default function Product({ input, setInput, drive }) {
     });
   };
 
-  const productsComponents = {
+  const collars = {
     "Chapita identificadora": (
       <IdPlates
         input={productsInput}
@@ -41,13 +44,13 @@ export default function Product({ input, setInput, drive }) {
         data={drive.options["Chapita identificadora"]}
       />
     ),
-    "Collar con Chapita": (
-      <RivetedPlates
-        input={productsInput}
-        setInput={setProductsInput}
-        data={drive.options["Collar con Chapita"]}
-      />
-    ),
+    // "Collar con Chapita": (
+    //   <RivetedPlates
+    //     input={productsInput}
+    //     setInput={setProductsInput}
+    //     data={drive.options["Collar con Chapita"]}
+    //   />
+    // ),
     "Collares Básicos": (
       <RivetedPlates
         input={productsInput}
@@ -64,13 +67,21 @@ export default function Product({ input, setInput, drive }) {
     ),
   };
 
-  const handleClick = (e) => {
-    const { value } = e.target;
-
-    productsInput.product.product !== value &&
-      setProductsInput({
-        product: { product: value, riveted: productsInput.product.riveted },
-      });
+  const chests = {
+    "Capita Hoodie Adidog": (
+      <AdidogHoodies
+        input={productsInput}
+        setInput={setProductsInput}
+        data={drive.options["Capita Hoodie Adidog"]}
+      />
+    ),
+    Pechera: (
+      <FullChest
+        input={productsInput}
+        setInput={setProductsInput}
+        data={drive.options["Pechera"]}
+      />
+    ),
   };
 
   return (
@@ -78,23 +89,13 @@ export default function Product({ input, setInput, drive }) {
       <p className="font-semibold mb-2">Producto</p>
       <input type="hidden" name="product" />
       <DataPlate input={productsInput} setInput={setProductsInput} />
-      <select
-        defaultValue=""
-        onClick={(e) => handleClick(e)}
-        className="w-full h-12 border rounded-lg px-1 shadow"
-      >
-        <option value="" disabled>
-          Producto
-        </option>
-        {drive.products.map((product, k) => {
-          return (
-            <option key={k} value={product}>
-              {product}
-            </option>
-          );
-        })}
-      </select>
-      {productsComponents[productsInput.product.product]}
+      <ProductSelects
+        input={productsInput}
+        setInput={setProductsInput}
+        drive={drive}
+      />
+      {collars[productsInput.product.product]}
+      {chests[productsInput.product.product]}
       {productsInput.product.firstStep && (
         <button
           onClick={(e) => createOrder(e)}
